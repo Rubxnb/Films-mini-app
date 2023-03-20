@@ -7,6 +7,8 @@ import { Rating } from '@mui/material'
 import { useList } from '../hooks/useList'
 import confetti from 'canvas-confetti';
 
+import '../App.css'
+
 const BASE_IMG_URL = 'https://image.tmdb.org/t/p/original/'
 
 const style = {
@@ -40,7 +42,7 @@ export default function ModalRating(props) {
     handleClose()
   }
   return (
-    <Modal
+    <Modal className='modal'
       aria-labelledby="transition-modal-title"
       aria-describedby="transition-modal-description"
       open={open}
@@ -64,7 +66,15 @@ export default function ModalRating(props) {
               value={ratingValue}
               onChange={(event, newValue) => {
                 if(newValue === 5){
-                  confetti()
+                 
+                  confetti({
+                    particleCount: 450,
+                    spread: 200,
+                    origin: { y: 0.68 },
+                    gravity: 0.8,
+                    zIndex: 2000
+                  })
+                
                 }
                 setRatingValue(newValue)
                 }}
