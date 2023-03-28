@@ -5,6 +5,7 @@
     align-items: center;
     font-family: 'montserrat';
     gap: 15px;
+    
 }
 
 
@@ -37,26 +38,6 @@ form{
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 32px;
-}
-
-
-.movie{
-    
-    text-align: center;
-}
-
-
-.movie h3, .movie p {
-    margin: 0;
-}
-.movie img{
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 16px;
-}
-
-.movie img:hover{
-    cursor: pointer;
 }
 
 input {

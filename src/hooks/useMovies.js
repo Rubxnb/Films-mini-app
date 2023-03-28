@@ -4,7 +4,7 @@ const API_KEY =  '9022ade996a34ba4279e69bdec7174b0'
 const API_BASE_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=es&query=`
 
 export function useMovies() {
-    const [query, setQuery] = useState('')
+    const [query, setQuery] = useState('spiderman')
     const [movies, setMovies] = useState([])
 
     useEffect(() => {

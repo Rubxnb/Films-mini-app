@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
-import { Link } from '../components/Link'
 import Movies from '../components/Movies'
 import { useMovies } from '../hooks/useMovies';
 import {gsap} from "gsap";
+import '../styles/pages/search.scss'
 
 export function Search() {
   
@@ -20,22 +20,20 @@ export function Search() {
     }
 
   return (
-    <div className="App">
-    <header className="App-header">
-      <h1>Buscador de películas</h1>
+    <div className="searchPage">
+      <header className="searchPage-header">
+        <h1>Buscador de películas</h1>
 
-      <Link to='/mylist'>Mi lista</Link>
-        <form className='form' onSubmit={submit}>
-            <input placeholder='Spider-man, Harry Potter, ...' ref={refInput}/>
-            <button className="button-gsap" >Buscar</button>
-        </form>
-    </header>
-    <main>
-      
-        <Movies movies={movies}/>
+          <form className='form' onSubmit={submit}>
+              <input className='form-text' placeholder='Spider-man, Harry Potter, ...' ref={refInput}/>
+              <button className="button-gsap" >Buscar</button>
+          </form>
+      </header>
+      <main>
         
-    </main>
-
+          <Movies movies={movies}/>
+          
+      </main>
   </div>
   )
 }

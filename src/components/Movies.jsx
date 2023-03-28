@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { useList } from '../hooks/useList'
 import ModalRating from './ModalRating'
+import Movie from './Movie'
 
-const BASE_IMG_URL = 'https://image.tmdb.org/t/p/original/'
+import '../styles/movieList.scss'
 
 export default function Movies({movies}) {
   const hasMovies = movies?.length > 0
@@ -27,18 +28,14 @@ function MoviesList( {movies}) {
   
   const handleClose = () => setOpen(false)
   return (
-  <ul className='movies'>
-  {
-      movies.map((movie, index) => {
-        return (
-          <li className='movie' key={index} >
-            <p>{movie.title}</p>
-            <img src={`${BASE_IMG_URL}${movie.poster}`} alt={movie.title} onClick={() => handleOpen(movie)} />
-          </li>
-        )
-      })
-    }
-    
-  {selectedMovie &&<ModalRating movie={selectedMovie} handleClose={handleClose} open={open}/>}
-  </ul>)
+    <section className='movies'>
+        <ul className='movies-list'>
+        {
+        movies.map((movie) => <Movie key={movie.id} movie={movie} handleOpenModal={handleOpen} />)
+        }
+        
+    {selectedMovie &&<ModalRating movie={selectedMovie} handleClose={handleClose} open={open}/>}
+    </ul>
+    </section>
+    )
 }

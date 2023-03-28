@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import { Link } from '../components/Link'
 import ModalRating from '../components/ModalRating'
+import Movie from '../components/Movie'
 import { useList } from '../hooks/useList'
-const BASE_IMG_URL = 'https://image.tmdb.org/t/p/original/'
 
 export function MyList() {
 
   const [open, setOpen] = useState(false)
   const [selectedMovie, setSelectedMovie] = useState()
 
-  const handleOpen = (movie) => {
+  const handleOpenModal = (movie) => {
     setSelectedMovie(movie)
     setOpen(true)
   }
@@ -22,24 +22,15 @@ export function MyList() {
     <div className="App">
     <header className="App-header">
       <h1>Mi Lista</h1>
-      <Link to='/search'>Búsqueda</Link>
       <button onClick={clearList}> Limpiar Lista</button>
       
     </header>
     <main>
       
     <ul className='movies'>
-   {
-    list.map((movie, index) => {
-        return (
-          <li className='movie' key={index} >
-            <p>{movie.title}</p>
-            <img src={`${BASE_IMG_URL}${movie.poster}`} 
-            alt={movie.title} onClick={() => handleOpen(movie)}/>
-          </li>
-        )
-      })
-    }
+      {
+        list.map((movie) => <Movie key={movie.id} movie={movie} handleOpenModal={handleOpenModal}/>)
+      }
     </ul>
     {selectedMovie &&<ModalRating movie={selectedMovie} handleClose={handleClose} open={open}/>}
     </main>

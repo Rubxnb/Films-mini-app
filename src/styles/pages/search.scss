@@ -1,0 +1,47 @@
+@import '../theme';
+
+.searchPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+input{
+    height: 39px;
+    font-size: 16px;
+    background-color: $unselected-color;
+    border: none;
+    border-radius: 8px;
+    padding-left: 10px;
+    color: white;
+    outline: none;
+}
+
+   
+input:focus{
+    box-shadow: 1px 0px 10px $purple;
+}
+
+button {
+    background-color: $red;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 550;
+    font-size: 16px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #e73737;
+}

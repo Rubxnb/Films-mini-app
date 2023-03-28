@@ -7,8 +7,6 @@ import { Rating } from '@mui/material'
 import { useList } from '../hooks/useList'
 import confetti from 'canvas-confetti';
 
-import '../App.css'
-
 const BASE_IMG_URL = 'https://image.tmdb.org/t/p/original/'
 
 const style = {

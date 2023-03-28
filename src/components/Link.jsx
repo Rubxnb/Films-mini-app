@@ -13,5 +13,5 @@ export function Link({target, to, ...props}) {
         navigate(to)
     }
 
-    return <a onClick={handleClick} href={to} target={target} {...props}/>
+    return <a className='anchors' onClick={handleClick} href={to} target={target} {...props}/>
 }
