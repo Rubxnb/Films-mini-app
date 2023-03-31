@@ -23,9 +23,9 @@ export function useMovies() {
         return {
         id: film.id,
         title: film.title,
-        poster: film.poster_path
+        poster: film.poster_path,
+        overview: film.overview
     }})
-
 
     return{ movies: mappedFilms, setQuery}
 }

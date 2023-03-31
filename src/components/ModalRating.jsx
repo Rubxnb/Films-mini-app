@@ -7,6 +7,8 @@ import { Rating } from '@mui/material'
 import { useList } from '../hooks/useList'
 import confetti from 'canvas-confetti';
 
+import '../styles/components/modal.scss'
+
 const BASE_IMG_URL = 'https://image.tmdb.org/t/p/original/'
 
 const style = {
@@ -16,9 +18,8 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 600,
-    bgcolor: 'background.paper',
-    border: '2px solid #000',
-    boxShadow: 24,
+    bgcolor: '#262837',
+    boxShadow:  '1px 0px 10px #21AF7F',
     p: 4,
     fontFamily: 'monserrat',
     borderRadius: '10px'
@@ -26,7 +27,6 @@ const style = {
 
 export default function ModalRating(props) { 
   const {movie, open, handleClose} = props
-
   const { addRating } = useList()
   const description = useRef()
   const [ratingValue, setRatingValue] = useState()
@@ -40,7 +40,7 @@ export default function ModalRating(props) {
     handleClose()
   }
   return (
-    <Modal className='modal'
+    <Modal 
       aria-labelledby="transition-modal-title"
       aria-describedby="transition-modal-description"
       open={open}
@@ -57,7 +57,10 @@ export default function ModalRating(props) {
         <Box sx={style}>
           <div className='modal'>
               <h2>{movie.title}</h2>
-              <img src={`${BASE_IMG_URL}${movie.poster}`} alt={movie.title} height= '50%' width='50%'/>
+              <div className='modal-info'>
+                <img src={`${BASE_IMG_URL}${movie.poster}`} alt={movie.title} height= '50%' width='50%'/>
+                <p>{movie.overview}</p>
+              </div>
             <Rating
               name="simple-controlled"
               size='large'

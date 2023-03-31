@@ -3,11 +3,10 @@ import { useList } from '../hooks/useList'
 import ModalRating from './ModalRating'
 import Movie from './Movie'
 
-import '../styles/movieList.scss'
+import '../styles/components/movieList.scss'
 
 export default function Movies({movies}) {
   const hasMovies = movies?.length > 0
-
   return (
     hasMovies 
     ? <MoviesList movies={movies}/> 
@@ -22,6 +21,7 @@ function MoviesList( {movies}) {
 
   const {getRating} = useList()
   const handleOpen = (movie) => {
+    
     setSelectedMovie(getRating(movie))
     setOpen(true)
   }

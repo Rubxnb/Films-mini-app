@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/navigationBar.scss'
+import '../styles/components/navigationBar.scss'
 import {Link} from './Link'
 
 export default function NavigationBar() {

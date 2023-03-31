@@ -1,0 +1,67 @@
+@import '../theme.scss';
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: 'montserrat';
+
+    &-info{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        
+    }
+   
+}
+
+p{
+    text-align: justify;
+    overflow: auto;
+    max-height: 400px;
+}
+
+p::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+p::-webkit-scrollbar:vertical {
+    gap:1px;
+    width:5px;
+}
+
+p::-webkit-scrollbar-button:increment,p::-webkit-scrollbar-button {
+    display: none;
+} 
+
+p::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+p::-webkit-scrollbar-thumb {
+    background-color: $green;
+    border-radius: 20px;
+}
+
+p::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+
+
+.textarea{
+    border: none;
+    background-color: $unselected-color;
+    color: white;
+    border-radius: 10px;
+    width: 400px;
+    outline: none;
+    padding-left: 10px;
+    resize: none;
+}
+
+.textarea:focus {
+    box-shadow: 1px 0px 10px $purple;
+}

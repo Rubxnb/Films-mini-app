@@ -1,5 +1,5 @@
 import { BASE_IMG_URL } from "../constants"
-import '../styles/movie.scss'
+import '../styles/components/movie.scss'
 
 export default function Movie({ movie, handleOpenModal }) {
 

@@ -83,13 +83,7 @@ button:focus {
     transform: translateY(2px);
   }
 
-.modal{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px
-}
+
 
 .textarea{
     border: 1px solid black;
