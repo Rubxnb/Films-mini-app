@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../styles/components/navigationBar.scss'
 import {Link} from './Link'
 
@@ -9,7 +9,7 @@ export default function NavigationBar() {
       <div className='navBar-info'>
 
       <img
-        src='/favicon.png'
+        src='favicon.png'
         alt='Logo Movies'
         height='50'
       />
@@ -18,9 +18,9 @@ export default function NavigationBar() {
       </div>
 
       <div className='navBar-links'>
-        <Link to='/'>Inicio</Link>
-        <Link to='/search'>Búsqueda</Link>
-        <Link to='/mylist'>Mi Lista</Link>
+        <Link to='/Movies-mini-app'>Inicio</Link>
+        <Link to='/Movies-mini-app/search'>Búsqueda</Link>
+        <Link to='/Movies-mini-app/mylist'>Mi Lista</Link>
       </div>
     </div>
   )

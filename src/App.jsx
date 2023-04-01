@@ -10,15 +10,15 @@ import './styles/app.scss'
 
 const routes = [ 
   {
-    path: '/',
+    path: '/Movies-mini-app',
     Component: Inicio
   },
   {
-    path: '/search',
+    path: '/Movies-mini-app/search',
     Component: Search
   },
   {
-    path: '/mylist',
+    path: '/Movies-mini-app/mylist',
     Component: MyList
   }
 ]
