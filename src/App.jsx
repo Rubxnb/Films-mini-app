@@ -14,6 +14,10 @@ const routes = [
     Component: Inicio
   },
   {
+    path: '/Movies-mini-app/',
+    Component: Inicio
+  },
+  {
     path: '/Movies-mini-app/search',
     Component: Search
   },

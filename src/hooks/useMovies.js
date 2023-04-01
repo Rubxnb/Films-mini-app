@@ -12,9 +12,6 @@ export function useMovies(GetType) {
         ? NOW_PLAYING_BASE_URL
         : `${QUERY_BASE_URL}${query}`
 
-    console.log(GetQuery)
-    console.log(GetType)
-    
     useEffect(() => {
         fetch(GetQuery)
         .then(response => response.json())
