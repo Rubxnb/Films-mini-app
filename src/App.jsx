@@ -5,12 +5,13 @@ import { Router } from './components/Router'
 import { MyListProvider } from './context/myList'
 import { MyList } from './pages/MyList'
 import {Search} from './pages/Search'
+import {Inicio} from './pages/Inicio'
 import './styles/app.scss'
 
 const routes = [ 
   {
     path: '/',
-    Component: Search
+    Component: Inicio
   },
   {
     path: '/search',

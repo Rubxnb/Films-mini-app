@@ -20,6 +20,7 @@ export function MyListProvider({children}) {
     
     const getRating = movie => {
         const filmInListIndex = state.findIndex(item => item.id === movie.id)
+
         return filmInListIndex >= 0 
         ? state[filmInListIndex] 
         : {

@@ -6,7 +6,7 @@ import '../styles/pages/search.scss'
 
 export function Search() {
   
-    const {movies, setQuery} = useMovies()
+    const {movies, setQuery} = useMovies('Query')
     const refInput = useRef()
     
     function submit(event) {

@@ -24,7 +24,6 @@ export const myListActionsReducer = (state, action) => {
                 return newList
 
             } else {
-
                 const newList = [
                     ...state,
                     {
