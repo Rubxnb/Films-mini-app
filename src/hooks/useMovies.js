@@ -22,7 +22,7 @@ export function useMovies(GetType) {
             console.log('Ha ocurrido un error al cargar las películas')
             setMovies([])
         })
-    }, [query])
+    }, [query, GetQuery])
 
     const mappedFilms = movies.map(film => {
         return {

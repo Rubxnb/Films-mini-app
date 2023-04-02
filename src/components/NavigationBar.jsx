@@ -9,7 +9,7 @@ export default function NavigationBar() {
       <div className='navBar-info'>
 
       <img
-        src='./favicon.png'
+        src='favicon.png'
         alt='Logo Movies'
         height='50'
       />
