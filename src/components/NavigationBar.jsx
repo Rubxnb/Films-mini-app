@@ -1,27 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import '../styles/components/navigationBar.scss'
 import {Link} from './Link'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import useDropDown from '../hooks/useDropDown'
 
 export default function NavigationBar() {
-  const [dropdownOpen, setDropdownOpen] = useState(false)
-  const [dropdownStyle, setDropdownStyle] = useState({height: '0px'})
   
-  useEffect(() => {
-    
-    if(dropdownOpen)
-      setDropdownStyle({height: '120px'}) 
-    else
-      setDropdownStyle({height: '0px'}) 
-
-  }, [dropdownOpen])
-  
-
-  function handleClick() {
-    setDropdownOpen(!dropdownOpen)
-  }
-
+  const {dropdownOpen, dropdownChangeState, dropdownStyle} = useDropDown()
 
   return (
     <section>
@@ -43,7 +29,7 @@ export default function NavigationBar() {
           <Link to='/Movies-mini-app/mylist'>Mi Lista</Link>
         </div>
         <div className='navBar-dropdown-menu'
-        onClick={handleClick}>
+        onClick={dropdownChangeState}>
           {
             dropdownOpen
             ? <CloseIcon className='navBar-dropdown-menu-button' fontSize='large'/>
