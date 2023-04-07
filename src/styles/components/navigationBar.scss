@@ -43,7 +43,9 @@ section{
     }
 
 }
-
+.navBar:hover{
+  cursor: pointer;
+}
 .anchors{
     display: block;
     color: white;

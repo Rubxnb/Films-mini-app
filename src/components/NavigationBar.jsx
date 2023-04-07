@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/components/navigationBar.scss'
-import {Link} from './Link'
+import {Link, navigate} from './Link'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import useDropDown from '../hooks/useDropDown'
@@ -12,8 +12,8 @@ export default function NavigationBar() {
   return (
     <section>
       <div className='navBar'>
-        <div className='navBar-info'>
-
+        <div className='navBar-info' 
+            onClick={() => navigate('/Movies-mini-app/')}>
           <img
             src='./favicon.png'
             alt='Logo Movies'
