@@ -17,7 +17,8 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 600,
+    width: '80%', // Utiliza un porcentaje en lugar de píxeles
+    maxWidth: '600px',
     bgcolor: '#262837',
     boxShadow:  '1px 0px 10px #21AF7F',
     p: 4,
@@ -25,6 +26,21 @@ const style = {
     borderRadius: '10px'
   }
 
+  const modalStyle = {
+    // Establece un tamaño máximo para la imagen en la modal
+    maxHeight: '50%',
+    maxWidth: '50%'
+  }
+  
+  // Utiliza media queries para aplicar diferentes estilos en función del tamaño de la pantalla
+  const mediaQueries = {
+    '@media (max-width: 768px)': {
+      // Establece un tamaño de fuente más pequeño en pantallas más pequeñas
+      fontSize: '14px'
+    }
+  }
+
+  
 export default function ModalRating(props) { 
   const {movie, open, handleClose} = props
   const { addRating } = useList()
@@ -58,7 +74,7 @@ export default function ModalRating(props) {
           <div className='modal'>
               <h2>{movie.title}</h2>
               <div className='modal-info'>
-                <img src={`${BASE_IMG_URL}${movie.poster}`} alt={movie.title} height= '50%' width='50%'/>
+                <img src={`${BASE_IMG_URL}${movie.poster}`} alt={movie.title} style={modalStyle}/>
                 <p>{movie.overview}</p>
               </div>
             <Rating
@@ -80,7 +96,7 @@ export default function ModalRating(props) {
                 setRatingValue(newValue)
                 }}
               />
-              <textarea ref={description} className='textarea' name="Text1" cols="40" rows="5" defaultValue={movie?.description}></textarea>
+              <textarea ref={description} className='textarea' name="Text1" cols="40" rows="5" defaultValue={movie?.description} style={mediaQueries}></textarea>
               <button onClick={handleClick}>Guardar</button>
           </div>
         </Box>
