@@ -6,7 +6,7 @@ Se hace una petición a la API de IMDB. En dicha petición se buscan películas 
 Al hacer click en cualquiera de ellas, aparece una ventana emergente que permitirá califlcarlas.
 Tras esto, se añaden a una lista de mis películas calificadas.
 
-<img src="https://user-images.githubusercontent.com/67047753/234266052-63605902-0bbc-4a18-9af2-daccabf4c282.png" width="200px"/> 
+<img src="https://user-images.githubusercontent.com/67047753/234266052-63605902-0bbc-4a18-9af2-daccabf4c282.png" width="700px"/> 
 
 ## WebSite
 https://rubxnb.github.io/Movies-mini-app/
